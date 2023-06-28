@@ -4,31 +4,32 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 const ButtonCadastrar = styled(Button)`
   position: absolute;
-  top: 268px;
+  top: 150px;
   left: 0px;
+  background-color: #03527e !important;
 `;
 const InputSenha = styled(TextField)`
   border: none;
   position: absolute;
-  top: 130px;
+  top: 60px;
   left: 0px;
 `;
 
 const InputSenha1 = styled(TextField)`
   border: none;
   position: absolute;
-  top: 0px;
+  top: -20px;
   left: 0px;
 `;
 
 const InputMatricula = styled(TextField)`
   border: none;
   position: absolute;
-  top: -140px;
+  top: -100px;
   left: 0px;
 `;
 
-const Iconbutton1 = styled(KeyboardBackspaceIcon)`
+const ButtonBack = styled(KeyboardBackspaceIcon)`
   position: absolute;
   top: 26px;
   left: 16px;
@@ -68,7 +69,7 @@ const InsiraUmaSenha = styled('label')`
 const InsiraSuaMatrcula = styled('label')`
   cursor: pointer;
   position: absolute;
-  top: 0px;
+  top: -120px;
   left: 2px;
   font-size: var(--font-size-sm);
   font-weight: 300;
@@ -88,11 +89,10 @@ const Form = styled('form')`
 const CrieSuaConta = styled('h1')`
   margin: 0;
   position: absolute;
-  top: 100px;
-  left: 68px;
+  top: 120px;
+  left: 75px;
   font-size: inherit;
-  font-weight: 500;
-  font-family: inherit;
+  font-weight: 400;
   display: inline-block;
   width: 254px;
   height: 45px;
@@ -123,7 +123,7 @@ const Head = styled('header')`
   top: 0px;
   background-color: #03527e;
   color: var(--color-white);
-  width: 410px;
+  width: 420px;
   height: 84px;
   text-align: center;
   font-style: italic;
@@ -139,4 +139,4 @@ const CadastroRoot = styled('div')`
   font-family: Roboto;
 `;
 
-export { CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, Iconbutton1 }
+export { CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, ButtonBack }

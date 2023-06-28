@@ -99,7 +99,7 @@ const Head = styled('header')`
   position: absolute;
   top: 0px;
   background-color: #03527e;
-  width: 390px;
+  width: 420px;
   height: 84px;
   text-align: center;
   font-size: var(--font-size-7xl);

@@ -1,4 +1,5 @@
-import {CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, Iconbutton1} from './style'
+import Link from 'next/link';
+import {CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, ButtonBack} from './style'
 
 
 function onButtonClick() {
@@ -11,14 +12,16 @@ export default function SingUp() {
             <Head>
                 <HeadChild alt="logo" src="/logo_rupay.svg" />
                 <Rupay>RUPay</Rupay>
-                <Iconbutton1 fontSize="large" onClick={onButtonClick}>
-                </Iconbutton1>
+                <Link href="/login">
+                <ButtonBack fontSize="large">
+                </ButtonBack>
+                </Link>
             </Head>
 
             <Form method="post">
-                <InsiraSuaMatrcula>
+{/**                <InsiraSuaMatrcula>
                     Insira sua matrícula:
-                </InsiraSuaMatrcula>
+    </InsiraSuaMatrcula>**/}
                 <InputMatricula
                     fullWidth
                     color="secondary"
@@ -29,9 +32,9 @@ export default function SingUp() {
                     size="large"
                     required
                 />
-                <InsiraUmaSenha>
+{/**                 <InsiraUmaSenha>
                     Insira uma senha:
-                </InsiraUmaSenha>
+                </InsiraUmaSenha>*/}
                 <InputSenha1
                     fullWidth
                     color="secondary"
@@ -43,9 +46,9 @@ export default function SingUp() {
                     required
                 />
 
-                <InsiraASenha>
+{/**                 <InsiraASenha>
                     Insira a senha novamente:
-                </InsiraASenha>
+                </InsiraASenha>*/}
                 <InputSenha
                     fullWidth
                     color="secondary"

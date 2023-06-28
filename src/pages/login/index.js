@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {LoginRoot,LoginChild, AindaNoPossuiContainer, RegistreSe, Span, AindaNoPossui, FormLogin, ButtonEntrar, InputSenha, InputMatricula, Rupay} from './style';
 
 function onAindaNoPossuiClick(){
@@ -42,7 +43,7 @@ export default function Login(){
         <AindaNoPossui>Ainda não possui uma conta?</AindaNoPossui>
         <RegistreSe>
           <Span>{` `}</Span>
-          <span>Registre-se</span>
+          <Link href='/signUp'>Registre-se</Link>
         </RegistreSe>
         <AindaNoPossui> agora!</AindaNoPossui>
       </AindaNoPossuiContainer>
