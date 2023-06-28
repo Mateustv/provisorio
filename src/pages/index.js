@@ -1,11 +1,22 @@
 import Link from "next/link";
 import {ButtonColocar, ButtonConsultar, ButtonSair, NomeUsuario, SeuSaldo, ValorSaldo, UserSection, Rupay, Head, PginaInicialRoot, Logo } from "./style";
+import { useSession } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from 'next/router'
 
-function onButtonClick(){
-  return null
-}
 
 export default function Home() {
+  const {status}= useSession()
+  const router = useRouter()
+
+
+  useEffect(() => {
+    if(status === "unauthenticated"){
+      router.replace("/login")
+    }
+  }, [status])
+
+  if(status === "authenticated"){
   return (
     <PginaInicialRoot>
       <Head>
@@ -46,5 +57,5 @@ export default function Home() {
         </Link>
       </ButtonSair>
     </PginaInicialRoot>
-  );
+  );}
 };
