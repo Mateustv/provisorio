@@ -3,11 +3,19 @@ import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import {useForm} from 'react-hook-form';
 import {LoginRoot,LoginChild, AindaNoPossuiContainer, RegistreSe, Span, AindaNoPossui, FormLogin, ButtonEntrar, InputSenha, InputMatricula, Rupay} from './style';
+import {z} from 'zod';
+import {zodResolver} from '@hookform/resolvers/zod'
 
+const creatUserSchema = z.object({
+  matricula: z.string().nonempty("A matrícula é obrigatoria").min(9, "A matrícula deve ter 9 caracteres"),
+  senha: z.string().nonempty("A senha é obrigatoria").min(8, "A senha deve ter no minimo 8 caracteres"),
+})
 
 export default function Login(){
-  const {register, handleSubmit} = useForm()
   const [output, setOutput] = useState('')
+  const {register, handleSubmit, formState:{errors}} = useForm({
+    resolver: zodResolver(creatUserSchema)
+  })
   
   async function loginUser(event){
       const res = await signIn('credentials', {
@@ -25,20 +33,22 @@ export default function Login(){
       <FormLogin onSubmit={handleSubmit(loginUser)}>
         <InputMatricula
           fullWidth
+          error={!!errors.matricula}
+          helperText={errors?.matricula?.message}
           color="primary"
           variant="outlined"
           type="text"
           label="insira sua matrícula"
-          required
           {...register('matricula')}
         />
         <InputSenha
           fullWidth
+          error={!!errors.senha}
+          helperText={errors?.senha?.message}
           color="primary"
           variant="outlined"
           type="password"
           label="insira sua senha "
-          required
           {...register('senha')}
         />
         <ButtonEntrar

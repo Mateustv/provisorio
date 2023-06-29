@@ -29,6 +29,7 @@ const InputSenha = styled(TextField)`
   position: absolute;
   top: 30px;
   left: 0px;
+  margin-top: 13px;
 `;
 const ButtonEntrar = styled(Button)`
   position: absolute;
