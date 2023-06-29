@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {ButtonColocar, ButtonConsultar, ButtonSair, NomeUsuario, SeuSaldo, ValorSaldo, UserSection, Rupay, Head, PginaInicialRoot, Logo } from "./style";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { useEffect } from "react";
 import { useRouter } from 'next/router'
 
@@ -51,10 +51,9 @@ export default function Home() {
         sx={{ width: 279 }}
         variant="contained"
         name="button_sair"
+        onClick={()=> signOut({callbackUrl: '/login'})}
       >
-        <Link href="/login">
           Sair
-        </Link>
       </ButtonSair>
     </PginaInicialRoot>
   );}

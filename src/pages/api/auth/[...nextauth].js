@@ -9,23 +9,25 @@ export const authOptions = {
         CredentialsProvider({
             type: 'credentials',
             crendentials: {},
-            authorize: (credentials, req) => {
+            async authorize (credentials, req){
                 const { matricula, senha } = credentials
+                // const user = {id: 1, matricula: matricula, senha: senha}
 
-                if(matricula !== 'admin' && senha !== 'admin'){
+                // if(user){
+                //     return user
+                // }else{
+                //     throw new Error('Credenciais inválidas')
+                // }
+
+                if(matricula !== '123456789' ||  senha !== '12345678'){
                     throw new Error('Credenciais inválidas')
                 }
 
-                return {id: 1, nome: 'admin', matricula: 'admin'}
+                return {id: '1', matricula: '123456789', senha: '12345678'}
 
             }
         })
     ],
-    pages:{
-        signIn: '/',
-        error: '/login',
-        singOut: '/login'
-    }
 }
 
 export default NextAuth(authOptions)

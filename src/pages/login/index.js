@@ -21,6 +21,7 @@ export default function Login(){
       const res = await signIn('credentials', {
         matricula: event.matricula,
         senha: event.senha,
+        callbackUrl: '/'
       })
       console.log(res)
       setOutput(JSON.stringify(event, null, 2))
