@@ -53,10 +53,11 @@ import {
 
     const Head = styled('header')`
     background-color: var(--color-steelblue);
-    width: 420px;
+    width: 100%;
     height: 84px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     margin-bottom: 20px;
     text-align: center;
     font-size: var(--font-size-7xl);
@@ -73,7 +74,7 @@ import {
     height: 316px;
     `;
     const FazerComentrioRoot = styled('div')`
-    width: 420px;
+    /* width: 420px; */
     height: 844px;
     overflow: hidden;
     text-align: center;
