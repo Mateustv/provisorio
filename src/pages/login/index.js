@@ -20,7 +20,7 @@ export default function Login(){
         matricula: event.matricula,
         senha: event.senha,
         callbackUrl: '/',
-        redirect: false
+        // redirect: false
       })
       console.log(res)
   }

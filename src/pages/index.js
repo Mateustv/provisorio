@@ -39,14 +39,15 @@ export default function Home() {
       >
         Colocar créditos
       </ButtonColocar>
-      <ButtonConsultar
-        sx={{ width: 279 }}
-        variant="contained"
-        name="button_consultar"
-        href="/cardpio-seleo-de-campus"
-      >
-        Consultar cardápio
-      </ButtonConsultar>
+      <Link href="/consultMenu">
+        <ButtonConsultar
+          sx={{ width: 279 }}
+          variant="contained"
+          name="button_consultar"
+        >
+          Consultar cardápio
+        </ButtonConsultar>
+      </Link>
       <ButtonSair
         sx={{ width: 279 }}
         variant="contained"
