@@ -8,7 +8,7 @@ export default function Select_menu(){
         <Head>
             <HeadChild alt="logo" src="/logo_rupay.svg" />
             <Rupay>RUPay</Rupay>
-            <Link href="/">
+            <Link href={"/"}>
               <ButtonBack fontSize='large'/>
             </Link>
         </Head>

@@ -14,46 +14,38 @@ const ButtonComentarios = styled(Button)`
 `;
 
 const ButtonBack = styled(KeyboardBackspaceIcon)`
-  position: absolute;
-  top: 26px;
-  left: 16px;
   cursor: pointer;
 `;
 
 const Cardapio = styled('img')`
     margin-top: 150px;
-    margin-left: 58px;
+    display: inline-block;
     width: 305px;
     height: 216px;
     object-fit: cover;
 `;
 
 const HeadChild = styled('img')`
-  position: absolute;
-  top: 26px;
-  left: 95px;
   border-radius: var(--br-6xs);
   width: 64px;
   height: 37px;
 `;
 const Rupay = styled('h2')`
-  margin: 0;
-  position: absolute;
-  top: 28px;
-  left: 168px;
   font-size: inherit;
   font-weight: 800;
   font-family: inherit;
+  font-style: italic;
   display: inline-block;
   width: 194px;
   height: 33px;
 `;
 
 const Head = styled('header')`
-  position: absolute;
-  top: 0px;
   background-color: var(--color-steelblue);
-  width: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 84px;
   text-align: center;
   font-size: var(--font-size-7xl);
@@ -61,14 +53,17 @@ const Head = styled('header')`
   font-family: var(--font-inter);
 `;
 const CardpioRoot = styled('div')`
-  position: relative;
-  width: 420px;
+  /* width: 420px; */
   height: 844px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow: hidden;
   
 `;
 const AlignButtons = styled('div')`
     margin-top: 50px;
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;

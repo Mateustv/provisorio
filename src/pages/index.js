@@ -31,17 +31,18 @@ export default function Home() {
       </UserSection>
 
       <ButtonColocar
-        sx={{ width: 279 }}
+        sx={{ width: 300 }}
+        size="large"
         variant="contained"
         name="buttun_colocar"
         href="/colocar-crditos"
-        target="_blank"
       >
         Colocar créditos
       </ButtonColocar>
       <Link href="/consultMenu">
         <ButtonConsultar
-          sx={{ width: 279 }}
+          sx={{ width: 300 }}
+          size="large"
           variant="contained"
           name="button_consultar"
         >
@@ -49,7 +50,8 @@ export default function Home() {
         </ButtonConsultar>
       </Link>
       <ButtonSair
-        sx={{ width: 279 }}
+        sx={{ width: 300 }}
+        size="large"
         variant="contained"
         name="button_sair"
         onClick={()=> signOut({callbackUrl: '/login'})}

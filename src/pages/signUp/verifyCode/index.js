@@ -21,18 +21,17 @@ export default function VerifyCode() {
     return (
     <ConfirmaoRoot>
         <Head>
-            <HeadChild alt="" src="/logo_rupay.svg" />
-            <Rupay>RUPay</Rupay>
             <Link href="/login">
                 <ButtonBack fontSize="large"/>
             </Link>
+            <HeadChild alt="" src="/logo_rupay.svg" />
+            <Rupay>RUPay</Rupay>
         </Head>
-        <Form onSubmit={handleSubmit(userVerficarCodigo)}>
             <DigiteOCdigo>
                 Digite o código de confirmação que foi enviado para seu email
                 institucional:
             </DigiteOCdigo>
-            
+        <Form onSubmit={handleSubmit(userVerficarCodigo)}>        
             <InputCode
             fullWidth
             color="primary"

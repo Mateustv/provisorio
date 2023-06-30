@@ -5,11 +5,11 @@ export default function Menu() {
   return (
     <CardpioRoot>
         <Head>
-            <HeadChild alt="" src="/logo_rupay.svg" />
-            <Rupay>RUPay</Rupay>
             <Link href="/consultMenu">
                 <ButtonBack fontSize="large"/>
             </Link>
+            <HeadChild alt="" src="/logo_rupay.svg" />
+            <Rupay>RUPay</Rupay>
         </Head>
         <Cardapio alt="logo" src="/cardapio.png"/>
         <AlignButtons>

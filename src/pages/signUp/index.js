@@ -25,12 +25,14 @@ export default function SingUp() {
     return (
         <CadastroRoot>
             <Head>
-                <HeadChild alt="logo" src="/logo_rupay.svg" />
-                <Rupay>RUPay</Rupay>
                 <Link href="/login">
                     <ButtonBack fontSize="large"/>
                 </Link>
+                <HeadChild alt="logo" src="/logo_rupay.svg" />
+                <Rupay>RUPay</Rupay>
             </Head>
+            
+            <CrieSuaConta>Crie sua conta</CrieSuaConta>
 
             <Form onSubmit={handleSubmit(userCadrastro)}>
                 <InputMatricula
@@ -69,7 +71,7 @@ export default function SingUp() {
                     {!!errors.confirm ? <SenhasDiferentes>{errors.confirm.message}</SenhasDiferentes> :<></>}
 
                 <ButtonCadastrar
-                    sx={{ width: 279 }}
+                    sx={{ width: 300 }}
                     variant="contained"
                     name="button_cadastrar"
                     size="large"
@@ -78,7 +80,6 @@ export default function SingUp() {
                     Cadastrar
                 </ButtonCadastrar>
             </Form>
-            <CrieSuaConta>Crie sua conta</CrieSuaConta>
         </CadastroRoot>
     );
 };
