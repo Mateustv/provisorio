@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {CardpioRoot, Head, HeadChild, Rupay, Cardapio, ButtonBaixar, ButtonComentar, ButtonComentarios, ButtonBack, AlignButtons} from "./style.js";
 
-const Menu = () => {
+export default function Menu() {
   return (
     <CardpioRoot>
         <Head>
@@ -42,4 +42,3 @@ const Menu = () => {
   );
 };
 
-export default Menu;
