@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { signIn } from 'next-auth/react';
-import { useState } from 'react';
 import {useForm} from 'react-hook-form';
 import {LoginRoot,LoginChild, AindaNoPossuiContainer, RegistreSe, Span, AindaNoPossui, FormLogin, ButtonEntrar, InputSenha, InputMatricula, Rupay} from './style';
 import {z} from 'zod';
@@ -12,7 +11,6 @@ const creatUserSchema = z.object({
 })
 
 export default function Login(){
-  const [output, setOutput] = useState('')
   const {register, handleSubmit, formState:{errors}} = useForm({
     resolver: zodResolver(creatUserSchema)
   })
@@ -21,10 +19,10 @@ export default function Login(){
       const res = await signIn('credentials', {
         matricula: event.matricula,
         senha: event.senha,
-        callbackUrl: '/'
+        callbackUrl: '/',
+        redirect: false
       })
       console.log(res)
-      setOutput(JSON.stringify(event, null, 2))
   }
 
   return (
@@ -38,7 +36,7 @@ export default function Login(){
           helperText={errors?.matricula?.message}
           color="primary"
           variant="outlined"
-          type="text"
+          type="number"
           label="insira sua matrícula"
           {...register('matricula')}
         />
@@ -71,8 +69,6 @@ export default function Login(){
         </RegistreSe>
         <AindaNoPossui> agora!</AindaNoPossui>
       </AindaNoPossuiContainer>
-
-      <pre>{output}</pre>
     </LoginRoot>
 
   );

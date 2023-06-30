@@ -4,9 +4,17 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 const ButtonCadastrar = styled(Button)`
   position: absolute;
-  top: 150px;
+  top: 155px;
   left: 0px;
   background-color: #03527e !important;
+`;
+
+const SenhasDiferentes = styled('p')`
+  position: absolute;
+  top: 135px;
+  left: 0px;
+  color: red;
+  font-size: 12px;
 `;
 const InputSenha = styled(TextField)`
   border: none;
@@ -139,4 +147,4 @@ const CadastroRoot = styled('div')`
   font-family: Roboto;
 `;
 
-export { CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, ButtonBack }
+export { CadastroRoot, Head, HeadChild, Rupay, CrieSuaConta, Form, InsiraSuaMatrcula, InsiraUmaSenha, InsiraASenha, InputMatricula, InputSenha1, InputSenha, ButtonCadastrar, ButtonBack, SenhasDiferentes }

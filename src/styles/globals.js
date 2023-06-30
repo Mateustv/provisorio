@@ -6,8 +6,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 :root {
 
-/* fonts
---font-inter: Roboto; */
+fonts
+--font-inter: Roboto;
 
 /* font sizes */
 --font-size-7xl: 26px;
@@ -18,10 +18,10 @@ export const GlobalStyle = createGlobalStyle`
 --font-size-2xs: 11px;
 
 /* Colors */
-/* --color-darkslategray: #044569; */
-/* --color-steelblue: #03527e; */
+--color-darkslategray: #044569; 
+--color-steelblue: #03527e;
 --color-white: #fff;
---color-black: #000;
+
 
 /* border radiuses */
 --br-6xs: 7px;
